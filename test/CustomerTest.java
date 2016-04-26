@@ -34,8 +34,8 @@ public class CustomerTest {
 
     @Test
     public void testGetName() throws Exception {
-        assertEquals(c1.getName(), c1Name);
-        assertEquals(c2.getName(), c2Name);
+        assertEquals("name of customer 1 does not match expected name", c1.getName(), c1Name);
+        assertEquals("name of customer 2 does not match expected name", c2.getName(), c2Name);
     }
 
     @Test
@@ -43,9 +43,9 @@ public class CustomerTest {
         String expectedStatement = "Rental Record for " + c1Name + "\n" +
                 "\tTitle\t\tDays\tAmount\n" +
                 "\t" + m1Name + "\t\t10\t30.0\n" +
-                "\tmovie2\t\t5\t3.0\n" +
+                "\t" + m2Name + "\t\t5\t3.0\n" +
                 "Amount owed is 33.0\n" +
                 "You earned 3 frequent renter points";
-        assertEquals(c1.statement(), expectedStatement);
+        assertEquals("statement output is not correct!", c1.statement(), expectedStatement);
     }
 }
