@@ -1,14 +1,8 @@
 /**
- * Created with IntelliJ IDEA.
- * User: Berkling
- * Date: 14.05.14
- * Time: 12:48
- * To change this template use File | Settings | File Templates.
+ * Created by dominik on 28.04.16.
  */
-public class ChildrensPrice implements Price {
-
-
-    public int getPriceCode(){
+public class ChildrensPrice extends Price {
+    public int getPriceCode() {
         return Movie.CHILDRENS;
     }
 
@@ -21,4 +15,3 @@ public class ChildrensPrice implements Price {
     }
 
 }
-
