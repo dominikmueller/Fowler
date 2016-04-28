@@ -3,16 +3,16 @@ import java.lang.*;
 import java.util.*;
 
 class Customer {
-    private String name;
+    private String _name;
     private Vector _rentals = new Vector();
     public Customer (String newname){
-        name = newname;
+        _name = newname;
     };
     public void addRental(Rental arg) {
         _rentals.addElement(arg);
     };
     public String getName (){
-        return name;
+        return _name;
     };
     public String statement() {
         Enumeration enum_rentals = _rentals.elements();
